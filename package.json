@@ -1,0 +1,35 @@
+{
+  "name": "wallet-sdk",
+  "version": "1.0.0",
+  "description": "bitap wallet sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bittap-protocol/wallet-sdk.git"
+  },
+  "keywords": [
+    "bittap",
+    "wallet"
+  ],
+  "author": "bittapwallet@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bittap-protocol/wallet-sdk/issues"
+  },
+  "homepage": "https://github.com/bittap-protocol/wallet-sdk#readme",
+  "dependencies": {
+    "bitcoinjs-lib": "^7.0.0-rc.0",
+    "bignumber.js": "^9.1.2",
+    "bip32": "^4.0.0",
+    "bip39": "^3.1.0",
+    "bitcore-lib": "^10.0.28",
+    "browser-crypto": "^2.1.0",
+    "bs58check-ts": "^0.1.0",
+    "buffer": "^6.0.3",
+    "crypto-js": "^4.2.0",
+    "ecpair": "^2.1.0"
+  }
+}
