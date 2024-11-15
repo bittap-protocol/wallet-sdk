@@ -1,10 +1,44 @@
 {
-  "name": "wallet-sdk",
+  "name": "@bittap/wallet-sdk",
   "version": "1.0.0",
-  "description": "bitap wallet sdk",
-  "main": "index.js",
+  "description": "bittap wallet sdk",
+  "type": "module",
+  "main": "./dist-libs/cjs/index.cjs",
+  "module": "./dist-libs/esm/index.js",
+  "types": "./dist-libs/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist-libs/cjs/index.cjs",
+      "import": "./dist-libs/esm/index.js",
+      "types": "./dist-libs/cjs/index.d.ts"
+    },
+    "./libs/*": {
+      "require": "./dist-libs/cjs/*.cjs",
+      "types": "./dist-libs/cjs/*.d.ts",
+      "import": "./dist-libs/esm/*.js"
+    }
+  },
+  "files": [
+    "libs/**/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && tsc -p ./tsconfig.json && tsc -p ./tsconfig.cjs.json && npm run formatjs",
+    "postbuild": "find dist-libs/cjs -type f -name \"*.js\" -exec bash -c 'mv \"$0\" \"${0%.js}.cjs\"' {} \\; && chmod +x ./fixup.cjs && node fixup.cjs",
+    "clean": "rimraf dist-libs",
+    "format": "npm run prettier -- --write",
+    "formatjs": "npm run prettierjs -- --write",
+    "format:ci": "npm run prettier -- --check && npm run prettierjs -- --check",
+    "prettier": "prettier \"libs/**/*.ts\" \"test/**/*.ts\" --ignore-path ./.prettierignore",
+    "prettierjs": "prettier \"dist-libs/**/*.js\" --ignore-path ./.prettierignore",
+    "dev:vue":"cd examples/vue && npm install && npm run dev",
+    "doc": "typedoc"
   },
   "repository": {
     "type": "git",
@@ -21,15 +55,26 @@
   },
   "homepage": "https://github.com/bittap-protocol/wallet-sdk#readme",
   "dependencies": {
-    "bitcoinjs-lib": "^7.0.0-rc.0",
     "bignumber.js": "^9.1.2",
     "bip32": "^4.0.0",
     "bip39": "^3.1.0",
-    "bitcore-lib": "^10.0.28",
+    "bitcoinjs-lib": "^7.0.0-rc.0",
     "browser-crypto": "^2.1.0",
     "bs58check-ts": "^0.1.0",
     "buffer": "^6.0.3",
     "crypto-js": "^4.2.0",
     "ecpair": "^2.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.12.0",
+    "@types/node": "^22.7.6",
+    "eslint": "^9.12.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typedoc": "^0.26.10",
+    "typescript": "^5.6.3"
   }
 }
