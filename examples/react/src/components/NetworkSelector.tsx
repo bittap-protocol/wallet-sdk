@@ -1,20 +1,27 @@
 import React from 'react';
+import { NetworkType } from '@bittap/wallet-sdk';
 import { ChevronDown } from 'lucide-react';
 
 interface NetworkSelectorProps {
-  currentNetwork: string;
-  onChange: (network: string) => void;
+  currentNetwork: NetworkType;
+  onChange: (network: NetworkType) => void;
+  disabled?: boolean;
 }
 
-const NetworkSelector: React.FC<NetworkSelectorProps> = ({ currentNetwork, onChange }) => {
-  const networks = ['testnet', 'mainnet', 'regtest'];
+const NetworkSelector: React.FC<NetworkSelectorProps> = ({
+  currentNetwork,
+  onChange,
+  disabled = false,
+}) => {
+  const networks = [NetworkType.testnet, NetworkType.mainnet, NetworkType.regtest];
 
   return (
     <div className="relative inline-block">
       <select
         value={currentNetwork}
-        onChange={(e) => onChange(e.target.value)}
-        className="appearance-none bg-gray-100 border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+        onChange={(e) => onChange(e.target.value as NetworkType)}
+        disabled={disabled}
+        className="appearance-none bg-gray-100 border border-gray-300 text-gray-700 py-2 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:bg-white focus:border-gray-500 disabled:bg-gray-200 disabled:cursor-not-allowed"
       >
         {networks.map((network) => (
           <option key={network} value={network}>

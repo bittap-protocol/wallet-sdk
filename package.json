@@ -1,6 +1,6 @@
 {
   "name": "@bittap/wallet-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "bittap wallet sdk",
   "type": "module",
   "main": "./dist-libs/cjs/index.cjs",

@@ -7,7 +7,7 @@ interface InvoiceCreatorProps {
 }
 
 const InvoiceCreator: React.FC<InvoiceCreatorProps> = ({ connected, onCreateInvoice }) => {
-  const [activeTab, setActiveTab] = useState('invoice');
+  const [activeTab, setActiveTab] = useState('btc');
   
   // BTC Tab State
   const [btcAddress, setBtcAddress] = useState('');
