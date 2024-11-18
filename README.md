@@ -43,11 +43,14 @@ For detailed usage instructions and API documentation, please refer to the follo
 - Connect wallet
 - Switch network
 - Listen for account changes
+- Listen transaction changes
 - Get current assets
 - Create invoice
-- Transfer
-- Send assets
+- Send BTC Transfer
+- Send taproot assets
 - Sign messages
+- Search assets
+- Get invoices
 
 ## Contributing
 
