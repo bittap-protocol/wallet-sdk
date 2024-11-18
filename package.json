@@ -40,7 +40,7 @@
     "dev:vue":"cd examples/vue && npm install && npm run dev",
     "dev:react":"cd examples/react && npm install && npm run dev",
     "doc": "typedoc",
-    "publish": "npm run build && npm run doc && git add . && git commit -m 'publish'; npm publish"
+    "publishNpm": "npm run build && npm run doc && git add . && git commit -m 'publish'; npm publish"
   },
   "repository": {
     "type": "git",
