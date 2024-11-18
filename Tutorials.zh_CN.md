@@ -183,8 +183,8 @@ searchAssets() {
 以下是一个完整的示例，展示了如何使用 BitTap 钱包 JSSDK 的主要功能：
 
 示例代码连接: 
-* [VUE 示例](https://github.com/bittap-protocol/wallet-sdk/examples/vue3)
-* [REACT 示例](https://github.com/bittap-protocol/wallet-sdk/examples/react)
+* [VUE 示例](https://bittap-vue.onebits.org/)
+* [REACT 示例](https://bittap-react.onebits.org/)
 
 这个示例展示了如何初始化 SDK，连接钱包，监听账户变化，以及使用各种主要功能。您可以根据自己的需求修改和扩展这个示例。
 

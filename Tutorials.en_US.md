@@ -183,8 +183,8 @@ searchAssets() {
 Here's a complete example demonstrating how to use the main features of BitTap Wallet JSSDK:
 
 Example code links:
-* [VUE Example](https://github.com/bittap-protocol/wallet-sdk/examples/vue3)
-* [REACT Example](https://github.com/bittap-protocol/wallet-sdk/examples/react)
+* [VUE Example](https://bittap-vue.onebits.org/)
+* [REACT Example](https://bittap-react.onebits.org/)
 
 This example demonstrates how to initialize the SDK, connect the wallet, listen for account changes, and use various main features. You can modify and extend this example according to your needs.
 

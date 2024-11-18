@@ -1,7 +1,7 @@
 {
   "name": "@bittap/wallet-sdk",
-  "version": "1.0.4",
-  "description": "bittap wallet sdk",
+  "version": "1.0.5",
+  "description": "Bittap wallet sdk",
   "type": "module",
   "main": "./dist-libs/cjs/index.cjs",
   "module": "./dist-libs/esm/index.js",
@@ -55,7 +55,7 @@
   "bugs": {
     "url": "https://github.com/bittap-protocol/wallet-sdk/issues"
   },
-  "homepage": "https://github.com/bittap-protocol/wallet-sdk#readme",
+  "homepage": "https://www.bittap.org",
   "dependencies": {
     "bignumber.js": "^9.1.2",
     "bip32": "^4.0.0",

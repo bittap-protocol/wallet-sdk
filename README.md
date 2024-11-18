@@ -37,6 +37,10 @@ For detailed usage instructions and API documentation, please refer to the follo
 
 - [English Documentation](./Tutorials.en_US.md)
 - [中文文档](./Tutorials.zh_CN.md)
+- [API reference](https://bittap-jssdk-doc.onebits.org/)
+* [VUE Example](https://bittap-vue.onebits.org/)
+* [REACT Example](https://bittap-react.onebits.org/)
+
 
 ## Main Functions
 
@@ -68,5 +72,6 @@ If you have any questions or need support, please contact us through:
 - Twitter: [@BittapLab](https://x.com/BittapLab)
 - Linktr: [@bittap](https://linktr.ee/bittap)
 - Official Website: [https://www.bittap.org](https://www.bittap.org)
+- Official Document: [https://doc.bittap.org](https://doc.bittap.org)
 
 Thank you for using BitTap Wallet JSSDK!
