@@ -1,6 +1,6 @@
 {
   "name": "@bittap/wallet-sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Bittap wallet sdk",
   "type": "module",
   "main": "./dist-libs/cjs/index.cjs",
@@ -19,7 +19,8 @@
     }
   },
   "files": [
-    "libs/**/*"
+    "libs/**/*",
+    "dist-libs/**/*"
   ],
   "engines": {
     "node": ">=18.0.0"
@@ -37,8 +38,8 @@
     "format:ci": "npm run prettier -- --check && npm run prettierjs -- --check",
     "prettier": "prettier \"libs/**/*.ts\" \"test/**/*.ts\" --ignore-path ./.prettierignore",
     "prettierjs": "prettier \"dist-libs/**/*.js\" --ignore-path ./.prettierignore",
-    "dev:vue":"cd examples/vue && npm install && npm run dev",
-    "dev:react":"cd examples/react && npm install && npm run dev",
+    "dev:vue": "cd examples/vue && npm install && npm run dev",
+    "dev:react": "cd examples/react && npm install && npm run dev",
     "doc": "typedoc",
     "publishNpm": "npm run build && npm run doc && git add . && git commit -m 'publish'; git push; npm publish"
   },
